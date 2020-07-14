@@ -1,11 +1,6 @@
 # GraphiQL 2.0.0 Recoil RFC
 
-We needed a greater atomization of state reconciliation in our application.
-With such high throughput events, the risk of unnecessary checks and re-renders grow.
-
-`RecoilJS` provides an excellent pattern for highly atomic collections of state. It rewards a seperation of concerns and allows us to build powerful API interfaces.
-
-In theory the atoms, selectors and libraries are not react dependent either, so these could be re-used for non-react implementations
+We needed a greater atomization of state reconciliation in our application. With such high throughput events, the risk of unnecessary checks and re-renders grow. More reasoning below
 
 ## TODO
 
@@ -64,3 +59,12 @@ Much of this ecosystem is still in progress! Here is a layout of what's left
 - [ ] register tab components as settings
 - [ ] hook to return all plugins
 - [ ] hooks for enabling/disabling plugins in runtime?
+
+## Reasoning
+
+`RecoilJS` provides an excellent pattern for highly atomic collections of state. It rewards a seperation of concerns and allows us to build powerful API interfaces. 
+
+In theory the atoms, selectors and libraries are not react dependent either, so these could be re-used for non-react implementations, but let's not worry about that too much yet.
+
+While `mobx` provides a fantastic and mature API and ecosystem with similar benefits, recoil appears to have greater promise with it's comprehensive support for react, including early support for concurrent mode features including suspense, etc
+
