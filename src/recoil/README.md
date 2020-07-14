@@ -30,6 +30,15 @@ Much of this ecosystem is still in progress! Here is a layout of what's left
 - [ ] integrate with `monaco-graphql`'s schema loading patterns
 - [ ] import, use custom settings
 
+### Sessions
+Combine files to represent a collection of sessions, with one `activeSession`
+
+- [x] add/remove session hooks
+- [x] all sessions
+- [x] `const [variables, setVariables] = useSessionValue('variables')`, etc for getting/setting the session string. defaults to active. only cares about changes to that file for that particular session. NICE!
+- [x] `const [opFile, setOperationFile] = useSessionFile('operation')`, etc for getting/setting the `File` which contains `ast`, etc. defaults to active
+- [x] find/set the currentSession that is selected by default when `sessionId` is not supplied to hooks or selectors
+
 ### Settings
 
 - [x] basic settings support
@@ -46,7 +55,7 @@ Much of this ecosystem is still in progress! Here is a layout of what's left
 - [ ] we should atomize tab state, and allow them to have/use their own atoms
 - [ ] regions tabs by region key
 - [ ] get/set current tab by region
-- [ ] reordering of tabss
+- [ ] reordering of tabs
 
 ### Projects
 
