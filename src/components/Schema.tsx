@@ -1,13 +1,13 @@
 import * as React from "react";
 import { useMonacoEditor } from "use-monaco";
 import { useRecoilValue, useRecoilState } from "recoil";
-import { schemaForType } from "../recoil/schemas/selectors";
+import { schemaAsFormat } from "../recoil/schemas/selectors";
 import { editorByKey } from "../recoil/editors/selectors";
 
 const uri = "https://swapi-graphql.netlify.app/.netlify/functions/index";
 
 function Schema() {
-  const schemaString = useRecoilValue(schemaForType({ uri, type: "SDL" }));
+  const schemaString = useRecoilValue(schemaAsFormat({ uri, outputFormat: "SDL" }));
   const [, setEditor] = useRecoilState(editorByKey("operation"));
 
   const { containerRef, monaco, model, loading, editor } = useMonacoEditor({
