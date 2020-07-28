@@ -1,6 +1,5 @@
 import * as React from "react";
 import List, { ListRow } from "./common/List";
-import Toolbar from "./common/Toolbar";
 import { Tabs} from "./common/Toolbar/Tabs";
 import ThemeProvider from "./common/themes/provider";
 

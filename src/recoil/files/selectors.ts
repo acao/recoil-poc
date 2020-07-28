@@ -1,4 +1,4 @@
-import { selectorFamily } from "recoil"
+import { selector, selectorFamily } from "recoil"
 import { parse } from "graphql";
 
 import { fileState, allFilesState } from './atoms'
@@ -37,3 +37,10 @@ export const fileByUri = selectorFamily<File, string>({
     set(fileState(uri), { ...oldFile, ...newFile })
   }
 });
+
+export const allFiles = selector({
+  key: 'Files/all',
+  get: ({get}) => {
+    return get(allFilesState);
+  }
+})
