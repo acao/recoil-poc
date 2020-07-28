@@ -10,7 +10,7 @@ Much of this ecosystem is still in progress! Here is a layout of what's left
 
 - [x] basic `uri` driven filesystem using recoil
 - [x] detect language from extension
-- [ ] selector for returning all files
+- [x] selector for returning all files
 - [ ] selector for returning files based on query
 
 ### Editors
